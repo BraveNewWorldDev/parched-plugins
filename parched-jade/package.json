@@ -1,0 +1,19 @@
+{
+  "name": "parched-jade",
+  "version": "0.0.5",
+  "description": "Adds jade to parched",
+  "main": "index.js",
+  "keywords": [
+    "parched",
+    "jade",
+    "gulp",
+    "browserify"
+  ],
+  "author": "Mike Wyatt <wyatt.mike@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^6.3.2",
+    "gulp-jade": "^0.9.0",
+    "jadeify": "git://github.com/mikew/jadeify.git#9af32c7595ede1c51de747f80cca22b566c8082b"
+  }
+}

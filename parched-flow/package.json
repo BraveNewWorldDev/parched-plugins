@@ -1,0 +1,18 @@
+{
+  "name": "parched-flow",
+  "version": "0.0.1",
+  "description": "Adds flow type checking support to parched",
+  "main": "index.js",
+  "scripts": {
+    "test": "./script/run-tests"
+  },
+  "keywords": [
+    "parched",
+    "flow"
+  ],
+  "author": "Mike Wyatt <wyatt.mike@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-flowtype": "^0.4.0"
+  }
+}

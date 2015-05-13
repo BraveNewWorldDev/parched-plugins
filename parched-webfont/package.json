@@ -1,0 +1,23 @@
+{
+  "name": "parched-webfont",
+  "version": "0.0.2",
+  "description": "Builds a webfont from a directory of .svg files",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./script/run-test"
+  },
+  "keywords": [
+    "parched",
+    "webfont"
+  ],
+  "author": "Mike Wyatt <wyatt.mike@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^0.9.0",
+    "eco": "^1.1.0-rc-3",
+    "grunt": "^0.4.5",
+    "grunt-webfont": "^0.4.8",
+    "mkdirp": "^0.5.0",
+    "svgo": "^0.5.0"
+  }
+}

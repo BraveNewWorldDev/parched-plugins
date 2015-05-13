@@ -1,0 +1,17 @@
+{
+  "name": "parched-csslint",
+  "version": "0.1.0",
+  "description": "Adds csslint to parched",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "parched",
+    "csslint",
+    "gulp"
+  ],
+  "author": "Mike Wyatt <wyatt.mike@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-csslint": "^0.1.5"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "parched-coffee-script",
+  "version": "0.1.0",
+  "description": "Adds coffee-script to parched",
+  "main": "index.js",
+  "scripts": {
+    "test": "./script/run-tests"
+  },
+  "keywords": [
+    "browserify",
+    "gulp",
+    "parched",
+    "coffee-script"
+  ],
+  "author": "Mike Wyatt <wyatt.mike@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "coffeeify": "0.7.x",
+    "gulp-coffee": "2.2.x"
+  }
+}

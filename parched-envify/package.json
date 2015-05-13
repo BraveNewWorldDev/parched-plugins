@@ -1,0 +1,20 @@
+{
+  "name": "parched-envify",
+  "version": "0.0.1",
+  "description": "Adds envify to parched",
+  "main": "index.js",
+  "scripts": {
+    "test": "./script/run-tests"
+  },
+  "keywords": [
+    "browserify",
+    "gulp",
+    "parched",
+    "envify"
+  ],
+  "author": "Mike Wyatt <wyatt.mike@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "envify": "^3.2.0"
+  }
+}

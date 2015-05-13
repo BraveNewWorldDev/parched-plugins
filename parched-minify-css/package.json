@@ -1,0 +1,15 @@
+{
+  "name": "parched-minify-css",
+  "version": "0.0.2",
+  "description": "Adds minify-css to parched",
+  "main": "index.js",
+  "keywords": [
+    "parched",
+    "minify-css"
+  ],
+  "author": "Mike Wyatt <wyatt.mike@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-minify-css": "^0.3.11"
+  }
+}

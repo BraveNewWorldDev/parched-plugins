@@ -1,0 +1,25 @@
+@font-face
+  font-family: '<%= @fontName %>'
+  src: url('<%= @httpFontsPath %>/<%= @fontNameWithHash %>.eot')
+  src: url('<%= @httpFontsPath %>/<%= @fontNameWithHash %>.eot') format('embedded-opentype'), url('<%= @httpFontsPath %>/<%= @fontNameWithHash %>.woff') format('woff'), url('<%= @httpFontsPath %>/<%= @fontNameWithHash %>.ttf') format('truetype'), url('<%= @httpFontsPath %>/<%= @fontNameWithHash %>.svg') format('svg')
+  font-weight: normal
+  font-style: normal
+
+%<%= @cssClassPrefix %>-font-base
+  font-family: '<%= @fontName %>'
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+<% for name, codepoint of @codepoints: %>
+<%= @leader %><%= @cssClassPrefix %>-<%= name %>
+  @extend %<%= @cssClassPrefix %>-font-base
+  &:before
+    content: "\<%= codepoint.toString(16) %>"
+<% end %>
+

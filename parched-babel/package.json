@@ -1,0 +1,20 @@
+{
+  "name": "parched-babel",
+  "version": "0.1.0",
+  "description": "Adds babel support to parched",
+  "main": "index.js",
+  "scripts": {
+    "test": "./script/run-tests"
+  },
+  "keywords": [
+    "parched",
+    "babel",
+    "browserify"
+  ],
+  "author": "Mike Wyatt <wyatt.mike@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babelify": "^5.0.3",
+    "gulp-babel": "^4.0.0"
+  }
+}

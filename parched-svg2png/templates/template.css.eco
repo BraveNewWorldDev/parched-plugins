@@ -1,0 +1,84 @@
+<%= @baseclasses_joined %> {
+  background-image: url('<%= @spriteMap.httpPath %>');
+  text-indent: -9999px;
+  display: block;
+}
+
+<% for name, coords of @spriteMap.coordinates: %>
+<%= @leader %><%= @cssClassPrefix %>-<%= name %> {
+  background-position: -<%= coords.x %>px -<%= coords.y %>px;
+  width: <%= coords.width %>px;
+  height: <%= coords.height %>px;
+}
+
+<% if coords.hover: %>
+<%= @leader %><%= @cssClassPrefix %>-<%= name %>:hover {
+  background-position: -<%= coords.hover.x %>px -<%= coords.hover.y %>px;
+}
+<% end %>
+
+<% if coords.target: %>
+<%= @leader %><%= @cssClassPrefix %>-<%= name %>:target {
+  background-position: -<%= coords.target.x %>px -<%= coords.target.y %>px;
+}
+<% end %>
+
+<% if coords.active: %>
+<%= @leader %><%= @cssClassPrefix %>-<%= name %>:active {
+  background-position: -<%= coords.active.x %>px -<%= coords.active.y %>px;
+}
+<% end %>
+
+<% if coords.focus: %>
+<%= @leader %><%= @cssClassPrefix %>-<%= name %>:focus {
+  background-position: -<%= coords.focus.x %>px -<%= coords.focus.y %>px;
+}
+<% end %>
+<% end %>
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.25),
+only screen and (min--moz-device-pixel-ratio: 1.25),
+only screen and (-o-min-device-pixel-ratio: 1.25/1),
+only screen and (min-device-pixel-ratio: 1.25),
+only screen and (min-resolution: 200dpi),
+only screen and (min-resolution: 1.25dppx)
+{
+  <%= @baseclasses_joined %> {
+    background-image: url('<%= @spriteMap2x.httpPath %>');
+    -webkit-background-size: <%= @halved @spriteMap2x.width %>px auto;
+    -moz-background-size: <%= @halved @spriteMap2x.width %>px auto;
+    -o-background-size: <%= @halved @spriteMap2x.width %>px auto;
+    background-size: <%= @halved @spriteMap2x.width %>px auto;
+  }
+
+<% for name, coords of @spriteMap2x.coordinates: %>
+  <%= @leader %><%= @cssClassPrefix %>-<%= name %> {
+    background-position: -<%= @halved coords.x %>px -<%= @halved coords.y %>px;
+  }
+
+<% if coords.hover: %>
+  <%= @leader %><%= @cssClassPrefix %>-<%= name %>:hover {
+    background-position: -<%= @halved coords.hover.x %>px -<%= @halved coords.hover.y %>px;
+  }
+<% end %>
+
+<% if coords.target: %>
+  <%= @leader %><%= @cssClassPrefix %>-<%= name %>:target {
+    background-position: -<%= @halved coords.target.x %>px -<%= @halved coords.target.y %>px;
+  }
+<% end %>
+
+<% if coords.active: %>
+  <%= @leader %><%= @cssClassPrefix %>-<%= name %>:active {
+    background-position: -<%= @halved coords.active.x %>px -<%= @halved coords.active.y %>px;
+  }
+<% end %>
+
+<% if coords.focus: %>
+  <%= @leader %><%= @cssClassPrefix %>-<%= name %>:focus {
+    background-position: -<%= @halved coords.focus.x %>px -<%= @halved coords.focus.y %>px;
+  }
+<% end %>
+<% end %>
+}

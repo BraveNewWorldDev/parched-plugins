@@ -1,0 +1,20 @@
+{
+  "name": "parched-jsx",
+  "version": "0.0.2",
+  "description": "Adds jsx support to parched",
+  "main": "index.js",
+  "scripts": {
+    "test": "./script/run-tests"
+  },
+  "keywords": [
+    "parched",
+    "jsx",
+    "browserify"
+  ],
+  "author": "Mike Wyatt <wyatt.mike@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-react": "^2.0.0",
+    "reactify": "^0.17.1"
+  }
+}

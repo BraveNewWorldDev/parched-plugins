@@ -1,0 +1,24 @@
+{
+  "name": "parched-svg2png",
+  "version": "0.0.3",
+  "description": "Builds both a retina and non-retina spritemap from a directory of .svg files",
+  "main": "lib/index.js",
+  "keywords": [
+    "parched",
+    "svg2png",
+    "spritesmith"
+  ],
+  "scripts": {
+    "test": "./script/run-tests"
+  },
+  "author": "Mike Wyatt",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^0.9.0",
+    "crypto": "0.0.3",
+    "eco": "^1.1.0-rc-3",
+    "mkdirp": "^0.5.0",
+    "spritesmith": "^0.20.0",
+    "svg2png": "^1.1.0"
+  }
+}

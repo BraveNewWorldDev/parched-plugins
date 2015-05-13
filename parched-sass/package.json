@@ -1,0 +1,16 @@
+{
+  "name": "parched-sass",
+  "version": "0.0.2",
+  "description": "Adds sass to parched",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "parched",
+    "sass"
+  ],
+  "author": "Mike Wyatt <wyatt.mike@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-sass": "^1.1.0"
+  }
+}

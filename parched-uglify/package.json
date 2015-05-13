@@ -1,0 +1,15 @@
+{
+  "name": "parched-uglify",
+  "version": "0.0.2",
+  "description": "Adds uglify to parched",
+  "main": "index.js",
+  "keywords": [
+    "parched",
+    "uglify"
+  ],
+  "author": "Mike Wyatt <wyatt.mike@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-uglify": "^1.0.1"
+  }
+}

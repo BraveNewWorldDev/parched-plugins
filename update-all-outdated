@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+for f in */; do
+  pushd "$f"
+    outdated=$(npm outdated --depth 0 --quiet --color false | tail -n+2 | cut -d ' ' -f 1)
+
+    if [ ! -z "${outdated}" ]; then
+      echo "Updating ${outdated}"
+      for pkg in ${outdated}; do
+        npm install --save "${pkg}@latest"
+      done
+    fi
+  popd
+done

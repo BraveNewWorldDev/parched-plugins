@@ -13,6 +13,6 @@
   "author": "Mike Wyatt <wyatt.mike@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "gulp-flowtype": "^0.4.0"
+    "gulp-flowtype": "^0.4.7"
   }
 }

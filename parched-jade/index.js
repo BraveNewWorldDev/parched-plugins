@@ -17,7 +17,8 @@ module.exports = function(Parched) {
     },
     getDefaultOptions: function() {
       return {
-        pretty: !this.isProduction()
+        pretty: !this.isProduction(),
+        runtimePath: require.resolve(require.resolve('jade/runtime'))
       };
     },
     transform: function() {

@@ -10,6 +10,6 @@
   "author": "Mike Wyatt <wyatt.mike@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "gulp-uglify": "^1.0.1"
+    "gulp-uglify": "^1.2.0"
   }
 }

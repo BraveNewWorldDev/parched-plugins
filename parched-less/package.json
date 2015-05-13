@@ -11,6 +11,6 @@
   "author": "Mike Wyatt <wyatt.mike@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "gulp-less": "^1.3.6"
+    "gulp-less": "^3.0.3"
   }
 }

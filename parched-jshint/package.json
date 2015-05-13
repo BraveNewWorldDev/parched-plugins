@@ -3,8 +3,7 @@
   "version": "0.0.2",
   "description": "Adds jshint to parched",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [
     "parched",
     "jshint",
@@ -13,7 +12,7 @@
   "author": "Mike Wyatt <wyatt.mike@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "gulp-jshint": "1.9.x",
-    "jshint-stylish": "1.0.x"
+    "gulp-jshint": "^1.10.0",
+    "jshint-stylish": "^1.0.2"
   }
 }

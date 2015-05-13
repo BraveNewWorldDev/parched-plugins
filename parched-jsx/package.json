@@ -14,7 +14,7 @@
   "author": "Mike Wyatt <wyatt.mike@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "gulp-react": "^2.0.0",
-    "reactify": "^0.17.1"
+    "gulp-react": "^3.0.1",
+    "reactify": "^1.1.1"
   }
 }

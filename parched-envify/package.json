@@ -15,6 +15,6 @@
   "author": "Mike Wyatt <wyatt.mike@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "envify": "^3.2.0"
+    "envify": "^3.4.0"
   }
 }

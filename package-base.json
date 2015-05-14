@@ -1,0 +1,18 @@
+{
+  "name": "parched-__PLUGIN_NAME__",
+  "version": "0.1.0",
+  "description": "Adds __DESCRIPTION__ to parched",
+  "main": "index.js",
+  "scripts": {
+    "test": "./script/run-test"
+  },
+  "keywords": [
+    "parched",
+    "__KEYWORD__"
+  ],
+  "author": "You <you@you.u>",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
+

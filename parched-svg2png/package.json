@@ -1,6 +1,10 @@
 {
   "name": "parched-svg2png",
-  "version": "0.0.3",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raisedmedia/parched-plugins.git"
+  },
   "description": "Builds both a retina and non-retina spritemap from a directory of .svg files",
   "main": "lib/index.js",
   "keywords": [

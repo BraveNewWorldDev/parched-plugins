@@ -1,6 +1,10 @@
 {
   "name": "parched-minify-css",
-  "version": "0.0.2",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raisedmedia/parched-plugins.git"
+  },
   "description": "Adds minify-css to parched",
   "main": "index.js",
   "keywords": [

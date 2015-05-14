@@ -1,6 +1,10 @@
 {
   "name": "parched-eslint",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raisedmedia/parched-plugins.git"
+  },
   "description": "Adds eslint support to parched",
   "main": "index.js",
   "scripts": {

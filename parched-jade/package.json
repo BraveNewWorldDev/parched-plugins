@@ -1,6 +1,10 @@
 {
   "name": "parched-jade",
-  "version": "0.0.5",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raisedmedia/parched-plugins.git"
+  },
   "description": "Adds jade to parched",
   "main": "index.js",
   "keywords": [

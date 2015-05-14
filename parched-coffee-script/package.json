@@ -1,6 +1,10 @@
 {
   "name": "parched-coffee-script",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raisedmedia/parched-plugins.git"
+  },
   "description": "Adds coffee-script to parched",
   "main": "index.js",
   "scripts": {

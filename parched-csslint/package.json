@@ -1,6 +1,10 @@
 {
   "name": "parched-csslint",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raisedmedia/parched-plugins.git"
+  },
   "description": "Adds csslint to parched",
   "main": "index.js",
   "scripts": {},

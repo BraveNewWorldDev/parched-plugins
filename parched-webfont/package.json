@@ -1,6 +1,10 @@
 {
   "name": "parched-webfont",
-  "version": "0.0.2",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raisedmedia/parched-plugins.git"
+  },
   "description": "Builds a webfont from a directory of .svg files",
   "main": "lib/index.js",
   "scripts": {

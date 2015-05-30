@@ -53,7 +53,7 @@ module.exports = class SpriteBuilder
       imageCache = @images2x
       scale = scale * 2
 
-    tmpName = "tmp/parched-svg2png/#{basename}.png"
+    tmpName = "tmp/parched-svg2png/#{@optionsClone.taskNameUnique}/#{basename}.png"
 
     Svg2png o.file, tmpName, scale, (err) ->
       imageCache.push tmpName

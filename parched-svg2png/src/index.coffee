@@ -22,6 +22,7 @@ module.exports = (Parched) ->
 
     transform: (context) ->
       optionsClone = Parched.vendor.xtend {}, @options
+      optionsClone.taskNameUnique = context.taskNameUnique
 
       # Support parched-tasks-webapp bundles
       if context.bundleName

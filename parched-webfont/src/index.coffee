@@ -18,7 +18,7 @@ module.exports = (Parched) ->
       true
 
     getDefaultOptions: ->
-      ret = {
+      {
         engine: 'node'
         src: 'glyphs/**/*.svg'
         #dest: 'public/fonts'
@@ -47,7 +47,7 @@ module.exports = (Parched) ->
       }
 
     transform: (context) ->
-      optionsClone = Parched.vendor.xtend {}, @options
+      optionsClone = Parched.vendor.xtend true, {}, @options
 
       # Support parched-tasks-webapp bundles
       if context.bundleName
@@ -61,13 +61,13 @@ module.exports = (Parched) ->
 
       optionsClone.files = []
 
-      @processManyFiles optionsClone.src, context, @__preprocess(optionsClone)
+      @processManyFiles optionsClone.src, context, @__preprocess(optionsClone, context)
 
-    __preprocess: (optionsClone) -> (files, done) =>
+    __preprocess: (optionsClone, context) -> (files, done) =>
       optionsClone.done = done
       svgPreprocessTasks = []
       svgoInstance = new Svgo optionsClone.svgoOptions
-      tmpDir = 'tmp/parched-webfont'
+      tmpDir = "tmp/parched-webfont/#{context.taskNameUnique}"
 
       for file in files
         svgPreprocessTasks.push do (file) -> (asyncCallback) ->
@@ -106,7 +106,7 @@ module.exports = (Parched) ->
         else
           optionsClone.fontNameWithHash = data.fontName
 
-        optionsClone.done()
+        #optionsClone.done()
 
         cssBuilder = new CSSBuilder optionsClone, optionsClone.done
         cssBuilder.build()

@@ -29,8 +29,9 @@ module.exports = (Parched) ->
         glyphs: undefined
         usePlaceholderSelectors: true
 
-        fontBaseName: 'icons'
         fontName: 'icons'
+        #fontBaseName: 'icons'
+        #fontFilename: 'icons'
         httpFontsPath: 'fonts'
         outputDirectory: 'fonts'
         addHashes: true
@@ -55,10 +56,12 @@ module.exports = (Parched) ->
         dest = optionsClone.dest || 'fonts'
         optionsClone.outputCSS = "#{context.bundleSrc}/#{outputCSS}"
         optionsClone.dest = "#{context.bundleDest}/#{dest}"
+        optionsClone.fontName = "#{optionsClone.fontName}-#{context.bundleName}"
       else
         optionsClone.outputCSS ?= "app/styles/glyphs.css"
         optionsClone.dest ?= "public/fonts"
 
+      optionsClone.fontFilename = optionsClone.fontName
       optionsClone.files = []
 
       @processManyFiles optionsClone.src, context, @__preprocess(optionsClone, context)
@@ -102,7 +105,9 @@ module.exports = (Parched) ->
         # to our callback as the fontforge one.
         if typeof data is 'function'
           optionsClone.fontNameWithHash = optionsClone.fontName
-          optionsClone.fontName = optionsClone.fontBaseName
+          #optionsClone.fontName = optionsClone.fontBaseName
+        else if !data?
+          optionsClone.fontNameWithHash = optionsClone.fontName
         else
           optionsClone.fontNameWithHash = data.fontName
 

@@ -13,12 +13,12 @@ module.exports = function(Parched) {
       return bundleOptions.extensions.push('.jade');
     },
     modifyBrowserifyObject: function(b) {
-      return b.transform(jadeify);
+      return b.transform(jadeify, this.options);
     },
     getDefaultOptions: function() {
       return {
         pretty: !this.isProduction(),
-        runtimePath: require.resolve(require.resolve('jade/runtime'))
+        runtimePath: require.resolve('jade/runtime')
       };
     },
     transform: function() {

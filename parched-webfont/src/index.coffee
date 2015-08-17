@@ -64,33 +64,37 @@ module.exports = (Parched) ->
       optionsClone.fontFilename = optionsClone.fontName
       optionsClone.files = []
 
-      @processManyFiles optionsClone.src, context, @__preprocess(optionsClone, context)
+      #@processManyFiles optionsClone.src, context, @__preprocess(optionsClone, context)
+      @processManyFiles optionsClone.src, context, @__build(optionsClone)
 
-    __preprocess: (optionsClone, context) -> (files, done) =>
-      optionsClone.done = done
-      svgPreprocessTasks = []
-      svgoInstance = new Svgo optionsClone.svgoOptions
-      tmpDir = "tmp/parched-webfont/#{context.taskNameUnique}"
+    #__preprocess: (optionsClone, context) -> (files, done) =>
+      #optionsClone.done = done
+      #svgPreprocessTasks = []
+      #svgoInstance = new Svgo optionsClone.svgoOptions
+      #tmpDir = "tmp/parched-webfont/#{context.taskNameUnique}"
 
-      for file in files
-        svgPreprocessTasks.push do (file) -> (asyncCallback) ->
-          svgContents = file.contents.toString()
-          svgoInstance.optimize svgContents, (result) ->
-            svgBaseName = Path.basename file.path
-            tmpFileName = Path.join tmpDir, svgBaseName
+      #for file in files
+        #svgPreprocessTasks.push do (file) -> (asyncCallback) ->
+          #svgContents = file.contents.toString()
+          #svgoInstance.optimize svgContents, (result) ->
+            #svgBaseName = Path.basename file.path
+            #tmpFileName = Path.join tmpDir, svgBaseName
 
-            Mkdirp.sync tmpDir
-            Fs.writeFileSync tmpFileName, result.data
+            #Mkdirp.sync tmpDir
+            #Fs.writeFileSync tmpFileName, result.data
 
-            optionsClone.files.push tmpFileName
-            asyncCallback()
+            #optionsClone.files.push tmpFileName
+            #asyncCallback()
 
-      Async.parallelLimit svgPreprocessTasks, JOB_LIMIT, @__build(optionsClone)
+      #Async.parallelLimit svgPreprocessTasks, JOB_LIMIT, @__build(optionsClone)
 
     __build: (optionsClone) -> (err) =>
-      if err
-        return optionsClone.done(err)
+    __build: (optionsClone) -> (files, done) =>
+      #if err
+        #return optionsClone.done(err)
 
+      optionsClone.files = (file.path for file in files)
+      console.log optionsClone.files
       @__buildGlyphList optionsClone
       @__buildCodepointList optionsClone
 
@@ -99,7 +103,7 @@ module.exports = (Parched) ->
       engine = require "grunt-webfont/tasks/engines/#{optionsClone.engine}"
       engine optionsClone, (data) =>
         if data is false
-          return optionsClone.done(new Error("Could not build font using #{optionsClone.engine}"))
+          return done(new Error("Could not build font using #{optionsClone.engine}"))
 
         # For whatever reason the node engine is not passing the same arguments
         # to our callback as the fontforge one.
@@ -113,7 +117,7 @@ module.exports = (Parched) ->
 
         #optionsClone.done()
 
-        cssBuilder = new CSSBuilder optionsClone, optionsClone.done
+        cssBuilder = new CSSBuilder optionsClone, done
         cssBuilder.build()
 
     __buildGlyphList: (optionsClone) ->

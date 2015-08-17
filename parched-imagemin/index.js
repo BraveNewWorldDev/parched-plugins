@@ -17,6 +17,10 @@ module.exports = function (Parched) {
     },
 
     transform: function () {
+      if (!Parched.isProduction()) {
+        return
+      }
+
       return imagemin(this.options)
     },
   })

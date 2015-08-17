@@ -1,6 +1,6 @@
 {
   "name": "parched-imagemin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Adds imagemin to parched",
   "main": "index.js",
   "scripts": {

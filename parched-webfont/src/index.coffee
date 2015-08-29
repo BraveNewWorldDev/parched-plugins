@@ -64,6 +64,9 @@ module.exports = (Parched) ->
       optionsClone.fontFilename = optionsClone.fontName
       optionsClone.files = []
 
+      if typeof optionsClone.httpFontsPath is 'function'
+        optionsClone.httpFontsPath = optionsClone.httpFontsPath(optionsClone)
+
       #@processManyFiles optionsClone.src, context, @__preprocess(optionsClone, context)
       @processManyFiles optionsClone.src, context, @__build(optionsClone)
 

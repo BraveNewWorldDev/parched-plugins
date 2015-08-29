@@ -34,6 +34,9 @@ module.exports = (Parched) ->
         optionsClone.outputCSS ?= "app/styles/sprites.css"
         optionsClone.outputImage ?= "public/images/sprite-map.png"
 
+      if typeof optionsClone.httpImagesPath is 'function'
+        optionsClone.httpImagesPath = optionsClone.httpImagesPath(optionsClone)
+
       @processManyFiles optionsClone.src, context,
           @buildEverything(optionsClone)
 

@@ -2,7 +2,7 @@ var imagemin = require('gulp-imagemin')
 
 module.exports = function (Parched) {
   Parched.createPlugin({
-    displayName: ' parched-imagemin',
+    displayName: 'parched-imagemin',
 
     src: [
       '*.gif',

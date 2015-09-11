@@ -97,7 +97,6 @@ module.exports = (Parched) ->
         #return optionsClone.done(err)
 
       optionsClone.files = (file.path for file in files)
-      console.log optionsClone.files
       @__buildGlyphList optionsClone
       @__buildCodepointList optionsClone
 

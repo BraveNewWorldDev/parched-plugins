@@ -96,7 +96,7 @@ module.exports = class CSSBuilder
 
   normalizeFileName: (fileName) ->
     fileName
-      .replace 'tmp/parched-svg2png/', ''
+      .replace /tmp\/parched-svg2png\/[^/]+\//, ''
       .replace '.png', ''
       .replace '/', '_'
       .replace '-2x', ''

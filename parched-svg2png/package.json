@@ -1,6 +1,6 @@
 {
   "name": "parched-svg2png",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/raisedmedia/parched-plugins.git"
@@ -18,11 +18,11 @@
   "author": "Mike Wyatt",
   "license": "MIT",
   "dependencies": {
-    "async": "^0.9.0",
+    "async": "^1.4.2",
     "crypto": "0.0.3",
     "eco": "^1.1.0-rc-3",
-    "mkdirp": "^0.5.0",
-    "spritesmith": "^1.3.1",
+    "mkdirp": "^0.5.1",
+    "spritesmith": "^1.3.2",
     "svg2png": "^1.1.1"
   }
 }

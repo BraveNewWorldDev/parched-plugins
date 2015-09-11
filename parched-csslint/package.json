@@ -1,6 +1,6 @@
 {
   "name": "parched-csslint",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/raisedmedia/parched-plugins.git"
@@ -16,6 +16,6 @@
   "author": "Mike Wyatt <wyatt.mike@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "gulp-csslint": "^0.1.5"
+    "gulp-csslint": "^0.2.0"
   }
 }

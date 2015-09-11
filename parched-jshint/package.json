@@ -1,6 +1,6 @@
 {
   "name": "parched-jshint",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/raisedmedia/parched-plugins.git"
@@ -16,7 +16,7 @@
   "author": "Mike Wyatt <wyatt.mike@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "gulp-jshint": "^1.10.0",
-    "jshint-stylish": "^1.0.2"
+    "gulp-jshint": "^1.11.2",
+    "jshint-stylish": "^2.0.1"
   }
 }

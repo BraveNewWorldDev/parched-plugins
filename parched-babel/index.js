@@ -6,11 +6,11 @@ module.exports = function (Parched) {
     displayName: 'parched-babel',
     src: '*.js',
 
-    //getDefaultOptions: function () {
-      //return {
-        //stripTypes: true
-      //}
-    //},
+    getDefaultOptions: function () {
+      return {
+        stage: 0,
+      }
+    },
 
     //modifyBundleOptions: function (bundleOptions) {
       //bundleOptions.extensions.push('.jsx')

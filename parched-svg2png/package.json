@@ -22,7 +22,7 @@
     "crypto": "0.0.3",
     "eco": "^1.1.0-rc-3",
     "mkdirp": "^0.5.1",
-    "spritesmith": "^1.3.2",
+    "spritesmith": "^1.4.0",
     "svg2png": "^1.1.1"
   }
 }

@@ -68,7 +68,13 @@ module.exports = (Parched) ->
         optionsClone.httpFontsPath = optionsClone.httpFontsPath(optionsClone)
 
       #@processManyFiles optionsClone.src, context, @__preprocess(optionsClone, context)
-      @processManyFiles optionsClone.src, context, @__build(optionsClone)
+      #@processManyFiles optionsClone.src, context, @__build(optionsClone)
+      @processManyFiles(
+        optionsClone.src,
+        context,
+        #@__trackFile.bind(this, optionsClone),
+        @__build.bind(this, optionsClone)
+      )
 
     #__preprocess: (optionsClone, context) -> (files, done) =>
       #optionsClone.done = done
@@ -91,12 +97,11 @@ module.exports = (Parched) ->
 
       #Async.parallelLimit svgPreprocessTasks, JOB_LIMIT, @__build(optionsClone)
 
-    __build: (optionsClone) -> (err) =>
-    __build: (optionsClone) -> (files, done) =>
+    __build: (optionsClone, files, done) ->
       #if err
         #return optionsClone.done(err)
 
-      optionsClone.files = (file.path for file in files)
+      optionsClone.files = ((file.originalPath || file.path) for file in files)
       @__buildGlyphList optionsClone
       @__buildCodepointList optionsClone
 

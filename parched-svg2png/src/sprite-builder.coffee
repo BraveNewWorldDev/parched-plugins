@@ -33,8 +33,9 @@ module.exports = class SpriteBuilder
   makePngTasks: ->
     tasks = []
     for file in @optionsClone.files
-      tasks.push @makePng file: file.path
-      tasks.push @makePng file: file.path, retina: true
+      filePath = file.originalPath || file.path
+      tasks.push @makePng file: filePath
+      tasks.push @makePng file: filePath, retina: true
 
     tasks
 

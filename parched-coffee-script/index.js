@@ -13,7 +13,7 @@ module.exports = function(Parched) {
       bundleOptions.extensions.push('.coffee', '.litcoffee');
     },
     modifyBrowserifyObject: function(b) {
-      b.transform(coffeeify);
+      b.transform(coffeeify, this.options);
     },
     transform: function() {
       return coffee(this.options);

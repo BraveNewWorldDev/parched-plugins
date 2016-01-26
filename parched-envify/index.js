@@ -12,6 +12,7 @@ module.exports = function (Parched) {
     },
     modifyBrowserifyObject: function (b) {
       var transformOpts = { global: this.options.global }
+      delete this.options.global
 
       if (Object.keys(this.options).length) {
         b.transform(envifyCustom(this.options), transformOpts)

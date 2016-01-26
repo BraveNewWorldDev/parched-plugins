@@ -1,0 +1,19 @@
+{
+  "name": "parched-cssnano",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raisedmedia/parched-plugins.git"
+  },
+  "description": "Adds cssnano to parched",
+  "main": "index.js",
+  "keywords": [
+    "parched",
+    "cssnano"
+  ],
+  "author": "Mike Wyatt <wyatt.mike@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-cssnano": "^2.1.0"
+  }
+}

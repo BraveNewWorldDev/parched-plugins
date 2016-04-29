@@ -6,18 +6,13 @@ module.exports = function (Parched) {
     displayName: 'parched-babel',
     src: '*.js',
 
-    getDefaultOptions: function () {
-      return {
-        stage: 0,
-      }
-    },
 
     //modifyBundleOptions: function (bundleOptions) {
       //bundleOptions.extensions.push('.jsx')
     //},
 
     modifyBrowserifyObject: function (b) {
-      b.transform(babelify.configure(this.options), this.options);
+      b.transform(babelify, this.options);
     },
 
     transform: function () {

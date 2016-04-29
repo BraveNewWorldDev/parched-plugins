@@ -18,7 +18,7 @@
   "author": "Mike Wyatt <wyatt.mike@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "babelify": "^6.3.0",
-    "gulp-babel": "^5.2.1"
+    "babelify": "^7.3.0",
+    "gulp-babel": "^6.1.2"
   }
 }

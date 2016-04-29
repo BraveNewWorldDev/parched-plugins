@@ -45,7 +45,7 @@ This is a hypothetical `app/scripts/index.js`:
 
 ```javascript
 // This needs to be first
-import RHLPatch from 'react-hot-loader/patch'
+import 'react-hot-loader/patch'
 
 import { AppContainer } from 'react-hot-loader'
 import React from 'react'

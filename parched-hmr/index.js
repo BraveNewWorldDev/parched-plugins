@@ -5,6 +5,9 @@ module.exports = function (Parched) {
     displayName: 'parched-hmr',
     src: '_',
     modifyBrowserifyObject: function (b) {
+      if (!global.isWatching) {
+        return
+      }
       b.plugin(hmr, this.options)
     }
   })

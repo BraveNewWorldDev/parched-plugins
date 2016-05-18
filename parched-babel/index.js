@@ -12,7 +12,7 @@ module.exports = function (Parched) {
     //},
 
     modifyBrowserifyObject: function (b) {
-      b.transform(babelify, this.options);
+      b.transform(babelify.configure(this.options));
     },
 
     transform: function () {
